@@ -1,4 +1,5 @@
 
+import Guest.Guest;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,11 +10,17 @@ public class GuestTest {
 
     @Before
     public void before() {
-        guest = new Guest("Conan");
+        guest = new Guest("Conan", 500);
     }
 
     @Test
     public void canGetName() {
         assertEquals("Conan", guest.getName());
+    }
+
+
+    @Test
+    public void canGetWallet() {
+        assertEquals(500, guest.getWallet());
     }
 }
